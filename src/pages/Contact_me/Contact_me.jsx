@@ -11,13 +11,13 @@ function Contact_me() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    try {
-      await axios.post("http://localhost:5000/api/contact", data);
-      alert("Message sent successfully ");
-      reset();
-    } catch (error) {
-      alert("Error sending message ");
-    }
+    // try {
+    //   await axios.post("http://localhost:5000/api/contact", data);
+    //   alert("Message sent successfully ");
+    //   reset();
+    // } catch (error) {
+    //   alert("Error sending message ");
+    // }
   };
 
   return (

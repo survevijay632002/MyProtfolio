@@ -4,6 +4,14 @@ import myPhoto from "../../assets/my-resumeimages.jpg";
 import resumePDF from "../../assets/Vijay_Surve_Resume.pdf";
 
 const Home = () => {
+  const HandlePrint = () => {
+    document
+      .getElementsByClassName("resume-btn")
+      .addEventListener("click", () => {
+        window.print();
+      });
+  };
+
   return (
     <div className="home">
       <div className="home-content">
@@ -20,8 +28,15 @@ const Home = () => {
 
       <div className="home-image">
         <img src={myPhoto} alt="Vijay Surve" />
-        <a href={resumePDF} target="_blank" rel="noopener noreferrer">
-          <button className="resume-btn">MY Resume</button>
+        <a
+          href={resumePDF}
+          target="_blank"
+          onClick={HandlePrint}
+          rel="noopener noreferrer"
+        >
+          <button onClick={HandlePrint} className="resume-btn">
+            MY Resume
+          </button>
         </a>
       </div>
     </div>
